@@ -1,11 +1,10 @@
-<h4>The number of Counters is : {{counters.length}}</h4>
-<h4>The number of Super Counters is: {{super_counters.length}}</h4>
-<h4>The number of Super Counters level 2 is: {{super_counters_two.length}}</h4>
-<h4>The number of Super Counters level 3 is: {{super_counters_three.length}}</h4>
+<div [ngClass] = "'counter-list'">    
+    <app-stats [counter_count] = 'counters.length' [super_counter_count] = 'super_counters.length' [super_counter_count_two] = 'super_counters_two.length' [super_counter_count_three] = 'super_counters_three.length' [average_clicks_per_second] = ''></app-stats>
 
-<div *ngIf = "counters.length < 10"><button (click)='create()'>Add Counter</button></div>
-
-<app-counter-detail *ngFor = 'let counter of counters' [counter] = 'counter'></app-counter-detail><button (click) = 'remove()'>Remove Counter</button>
-<app-super-counter *ngFor = 'let counter of super_counters' [counter] = 'counter'></app-super-counter>
-<app-super-counter-two *ngFor = 'let counter of super_counters_two' [counter] = 'counter'></app-super-counter-two>
-<app-super-counter-three *ngFor = 'let counter of super_counters_three' [counter] = 'counter'></app-super-counter-three>
+    <div *ngIf = "counters.length < 10"><button (click)='create()'>Add Counter</button></div>
+    
+    <app-counter-detail *ngFor = 'let counter of counters' [counter] = 'counter'></app-counter-detail><button (click) = 'remove()'>Remove Counter</button>
+    <app-super-counter *ngFor = 'let counter of super_counters' [counter] = 'counter'></app-super-counter>
+    <app-super-counter-two *ngFor = 'let counter of super_counters_two' [counter] = 'counter'></app-super-counter-two>
+    <app-super-counter-three *ngFor = 'let counter of super_counters_three' [counter] = 'counter'></app-super-counter-three>
+</div>

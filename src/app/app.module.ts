@@ -8,6 +8,7 @@ import { CounterDetailComponent } from './counter-detail/counter-detail.componen
 import { SuperCounterComponent } from './super-counter/super-counter.component';
 import { SuperCounterTwoComponent } from './super-counter-two/super-counter-two.component';
 import { SuperCounterThreeComponent } from './super-counter-three/super-counter-three.component';
+import { StatsComponent } from './stats/stats.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { SuperCounterThreeComponent } from './super-counter-three/super-counter-
     CounterDetailComponent,
     SuperCounterComponent,
     SuperCounterTwoComponent,
-    SuperCounterThreeComponent
+    SuperCounterThreeComponent,
+    StatsComponent
   ],
   imports: [
     BrowserModule,

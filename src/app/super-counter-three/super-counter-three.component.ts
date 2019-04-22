@@ -8,12 +8,12 @@ import { Counter } from '../counter';
 })
 export class SuperCounterThreeComponent implements OnInit {
 
-  autoShow = setInterval(() => {this.counter.value += 2}, 1000);
-
   @Input()
   counter: Counter;
 
-  constructor() { }
+  constructor() { 
+    setInterval(() => {this.counter.value += 2}, 1000);
+  }
 
   ngOnInit() {
   }
